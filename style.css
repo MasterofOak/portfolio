@@ -158,3 +158,8 @@ ul {
 #linkedin_icon {
     background-image: url(./linkedin.png);
 }
+#skills_section {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
