@@ -153,10 +153,10 @@ ul {
     background-size: 2.25em;
 }
 #github_icon {
-    background-image: url(./github.png);
+    background-image: url(./img/github.png);
 }
 #linkedin_icon {
-    background-image: url(./linkedin.png);
+    background-image: url(./img/linkedin.png);
 }
 #skills_section {
     display: grid;
