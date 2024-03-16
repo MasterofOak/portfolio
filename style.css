@@ -207,9 +207,6 @@ ul {
     margin: 1em;
     border-radius: 1rem;
 }
-#certifications p:nth-of-type(1) {
-    margin-bottom: 20px;
-}
 .cert {
     display: flex;
     justify-content: space-between;
