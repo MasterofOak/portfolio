@@ -42,6 +42,7 @@ ul {
     );
     overflow: hidden;
 }
+
 #info_section {
     display: grid;
     height: 50vh;
@@ -230,4 +231,68 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #d7cf07;
+}
+@media (max-width: 600px) {
+    #info_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        height: 100vh;
+    }
+    #greetings {
+        flex: 1 0 auto;
+        font-size: 2rem;
+    }
+    #summary {
+        flex: 1 0 auto;
+        font-size: 1.75rem;
+        border-bottom: none;
+    }
+    #contacts {
+        flex: 1 0 auto;
+        order: 3;
+        border-top: 8px solid #2cd87f;
+        border-bottom: 8px solid #2cd87f;
+        padding: 1.5em 1em;
+    }
+    .contact a {
+        font-size: 1.5rem;
+    }
+    .contact a:hover {
+        animation: none;
+    }
+    #skills_section {
+        padding: 1em 0em;
+    }
+    #skills_section p {
+        margin-left: 25px;
+    }
+    #skills {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .skill {
+        width: 300px;
+        height: 100px;
+        padding: 2em 1.5em;
+    }
+    #certifications {
+        font-size: 1.5rem;
+        padding: 0.75em 1em;
+    }
+    .cert {
+        background-color: rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1em;
+        margin-top: 1em;
+        border-radius: 20px;
+    }
+    .cert p {
+        text-align: center;
+    }
+    .cert a {
+        margin-top: 1em;
+    }
 }
