@@ -50,7 +50,7 @@ on:
 env:
   PROJECT_ID: my-portfolio-418411 # TODO: update Google Cloud project id
   GAR_LOCATION: europe-central2 # TODO: update Artifact Registry location
-  SERVICE: prod-2 # TODO: update Cloud Run service name
+  SERVICE: prod # TODO: update Cloud Run service name
   REGION: europe-central2 # TODO: update Cloud Run service region
 
 jobs:
@@ -92,8 +92,8 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}" ./
-          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}"
+          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/portfolio:${{ github.sha }}" ./
+          docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/portfolio:${{ github.sha }}"
 
       # END - Docker auth and build
 
