@@ -50,7 +50,7 @@ on:
 env:
   PROJECT_ID: my-portfolio-418411 # TODO: update Google Cloud project id
   GAR_LOCATION: europe-central2 # TODO: update Artifact Registry location
-  SERVICE: prod # TODO: update Cloud Run service name
+  SERVICE: prod-2 # TODO: update Cloud Run service name
   REGION: europe-central2 # TODO: update Cloud Run service region
 
 jobs:
