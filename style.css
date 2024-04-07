@@ -144,6 +144,8 @@ ul {
     position: relative;
     width: 80px;
     height: 100%;
+    text-align: justify;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: 2.25em;
@@ -232,21 +234,24 @@ footer {
     justify-content: center;
     background-color: #d7cf07;
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     #info_section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
         height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 1fr 15%;
+        grid-template-areas:
+            'greetings'
+            'summary'
+            'contacts';
     }
     #greetings {
         flex: 1 0 auto;
         font-size: 2rem;
+        padding: 1em 0.5em 0em 1.5em;
     }
     #summary {
         flex: 1 0 auto;
-        font-size: 1.75rem;
+        font-size: 1.7em;
         border-bottom: none;
     }
     #contacts {
@@ -254,23 +259,29 @@ footer {
         order: 3;
         border-top: 8px solid #2cd87f;
         border-bottom: 8px solid #2cd87f;
-        padding: 1.5em 1em;
+        padding: 0em 2em;
     }
     .contact a {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
     .contact a:hover {
         animation: none;
     }
+    .icon {
+        background-size: 3em;
+    }
     #skills_section {
-        padding: 1em 0em;
+        padding: 1.5em 0em;
+        grid-template-rows: 100px 1fr;
+        margin: 0.5em;
+        font-size: 1.75em;
     }
     #skills_section p {
-        margin-left: 25px;
+        margin-left: 40px;
     }
     #skills {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1em;
     }
     .skill {
         width: 300px;
@@ -294,5 +305,84 @@ footer {
     }
     .cert a {
         margin-top: 1em;
+    }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+    #info_section {
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 1fr 15%;
+        grid-template-areas:
+            'greetings'
+            'summary'
+            'contacts';
+    }
+    #greetings {
+        font-size: 3rem;
+        padding: 0.5em 0.5em 1em 1.5em;
+    }
+    #summary {
+        font-size: 2.75rem;
+        padding: 1em 1.5em 1em 1em;
+    }
+    #contacts {
+        padding: 0em 1em;
+        margin-bottom: 30px;
+    }
+    .contact a {
+        font-size: 2rem;
+    }
+    .contact a:hover {
+        animation: none;
+    }
+    .icon {
+        background-size: 4rem;
+    }
+    #skills {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .skill {
+        width: auto;
+        padding: 1em 1em;
+        font-size: 1.5rem;
+    }
+    .skill p {
+        margin: 0px !important;
+    }
+    .skill img {
+        width: 30%;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1248px) {
+    #info_section {
+        display: grid;
+        height: 50vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 20%;
+        grid-template-areas:
+            'greetings summary'
+            'contacts summary';
+    }
+    #summary {
+        font-size: 2.25rem;
+        padding: 1em 1.5em 0em 1em;
+    }
+    #skills {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .skill {
+        width: auto;
+        padding: 1em 1em;
+        font-size: 1.5rem;
+    }
+    .skill p {
+        margin: 0px !important;
+    }
+    .skill img {
+        width: 30%;
     }
 }
